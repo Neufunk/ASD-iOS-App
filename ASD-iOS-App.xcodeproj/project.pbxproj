@@ -12,6 +12,9 @@
 		C8185F262094D72A00B1E657 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = C8185F232094D72A00B1E657 /* envelope.png */; };
 		C8185F272094D72A00B1E657 /* grid-world.png in Resources */ = {isa = PBXBuildFile; fileRef = C8185F242094D72A00B1E657 /* grid-world.png */; };
 		C8185F292094F01100B1E657 /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8185F282094F01100B1E657 /* Effect.swift */; };
+		C82AB4E8209774D8005FD92E /* Logo_Apple_Swift.png in Resources */ = {isa = PBXBuildFile; fileRef = C82AB4E6209774D8005FD92E /* Logo_Apple_Swift.png */; };
+		C82AB4E9209774D8005FD92E /* eu_gdpr_compliant_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C82AB4E7209774D8005FD92E /* eu_gdpr_compliant_logo.png */; };
+		C82AB4EB2097B2BE005FD92E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82AB4EA2097B2BE005FD92E /* InfoViewController.swift */; };
 		C846DA37208D2B6100C1E21D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C846DA36208D2B6100C1E21D /* README.md */; };
 		C8A60FF92094599600D372F3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A60FF82094599600D372F3 /* Data.swift */; };
 		C8A60FFB2094833400D372F3 /* Logo Internet.png in Resources */ = {isa = PBXBuildFile; fileRef = C8A60FFA2094833400D372F3 /* Logo Internet.png */; };
@@ -30,6 +33,9 @@
 		C8185F232094D72A00B1E657 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		C8185F242094D72A00B1E657 /* grid-world.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grid-world.png"; sourceTree = "<group>"; };
 		C8185F282094F01100B1E657 /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
+		C82AB4E6209774D8005FD92E /* Logo_Apple_Swift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_Apple_Swift.png; sourceTree = "<group>"; };
+		C82AB4E7209774D8005FD92E /* eu_gdpr_compliant_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eu_gdpr_compliant_logo.png; sourceTree = "<group>"; };
+		C82AB4EA2097B2BE005FD92E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		C846DA36208D2B6100C1E21D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C8A60FF82094599600D372F3 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		C8A60FFA2094833400D372F3 /* Logo Internet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo Internet.png"; sourceTree = "<group>"; };
@@ -58,6 +64,8 @@
 		C8AD260D208D13680013DA2B /* res */ = {
 			isa = PBXGroup;
 			children = (
+				C82AB4E7209774D8005FD92E /* eu_gdpr_compliant_logo.png */,
+				C82AB4E6209774D8005FD92E /* Logo_Apple_Swift.png */,
 				C8185F232094D72A00B1E657 /* envelope.png */,
 				C8185F242094D72A00B1E657 /* grid-world.png */,
 				C8185F222094D72A00B1E657 /* info.png */,
@@ -90,11 +98,12 @@
 			isa = PBXGroup;
 			children = (
 				C8CAD44C2088C9A200EE0A94 /* Assets.xcassets */,
-				C8CAD4452088C9A200EE0A94 /* AppDelegate.swift */,
 				C8CAD4472088C9A200EE0A94 /* ViewController.swift */,
 				C8A60FFC2094988800D372F3 /* SecondViewController.swift */,
+				C82AB4EA2097B2BE005FD92E /* InfoViewController.swift */,
 				C8185F282094F01100B1E657 /* Effect.swift */,
 				C8A60FF82094599600D372F3 /* Data.swift */,
+				C8CAD4452088C9A200EE0A94 /* AppDelegate.swift */,
 				C8CAD4492088C9A200EE0A94 /* Main.storyboard */,
 				C8CAD44E2088C9A200EE0A94 /* LaunchScreen.storyboard */,
 				C8CAD4512088C9A200EE0A94 /* Info.plist */,
@@ -160,6 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C82AB4E8209774D8005FD92E /* Logo_Apple_Swift.png in Resources */,
 				C8A60FFB2094833400D372F3 /* Logo Internet.png in Resources */,
 				C8185F212094D63A00B1E657 /* call-answer.png in Resources */,
 				C8CAD4502088C9A200EE0A94 /* LaunchScreen.storyboard in Resources */,
@@ -168,6 +178,7 @@
 				C846DA37208D2B6100C1E21D /* README.md in Resources */,
 				C8CAD44B2088C9A200EE0A94 /* Main.storyboard in Resources */,
 				C8AD260F208D13680013DA2B /* asd_logo.png in Resources */,
+				C82AB4E9209774D8005FD92E /* eu_gdpr_compliant_logo.png in Resources */,
 				C8185F272094D72A00B1E657 /* grid-world.png in Resources */,
 				C8185F252094D72A00B1E657 /* info.png in Resources */,
 			);
@@ -184,6 +195,7 @@
 				C8185F292094F01100B1E657 /* Effect.swift in Sources */,
 				C8CAD4482088C9A200EE0A94 /* ViewController.swift in Sources */,
 				C8A60FF92094599600D372F3 /* Data.swift in Sources */,
+				C82AB4EB2097B2BE005FD92E /* InfoViewController.swift in Sources */,
 				C8CAD4462088C9A200EE0A94 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

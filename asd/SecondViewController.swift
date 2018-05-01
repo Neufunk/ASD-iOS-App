@@ -14,9 +14,9 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var adressLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var callButton: UIButton!
+    @IBOutlet weak var infoView: UIView!
     
     let data = Data()
-    let viewController = ViewController()
     var initialTouchPoint: CGPoint = CGPoint(x: 0,y: 0)
     
     override func viewDidLoad() {
@@ -43,6 +43,7 @@ class SecondViewController: UIViewController {
         }
     }
     
+    // currently unused
     @IBAction func onSwipeDown(_ sender: UIPanGestureRecognizer) {
         let touchPoint = sender.location(in: self.view?.window)
         if sender.state == UIGestureRecognizerState.began {
@@ -61,8 +62,5 @@ class SecondViewController: UIViewController {
             }
         }
     }
-    
-    
-    
     
 }

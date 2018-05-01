@@ -5,15 +5,6 @@
 //  Created by Johnathan on 19/04/18.
 //  Copyright © 2018 Liblum. All rights reserved.
 //  github.com/Neufunk/ASD-iOS-App
-//
-// INDEX //
-// Keep that order when populating arrays !
-/************
- 0 - NAMUR
- 1 - PHILIPPEVILLE
- 2 - CINEY
- 3 - GEDINNE
- ************/
 
 import UIKit
 import CoreLocation
@@ -60,7 +51,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         currentCoordinate = CLLocation(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
     }
     
-    private func findNearestCenter() {
+    func findNearestCenter() {
         var finaleDistance = currentCoordinate.distance(from: data.arrayLocation[Data.centre]!)
         for (key, _) in data.arrayLocation {
             let newDistance = currentCoordinate.distance(from: data.arrayLocation[key]!)

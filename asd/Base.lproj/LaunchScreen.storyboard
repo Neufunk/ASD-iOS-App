@@ -18,12 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asd_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="gC5-A0-i0k">
-                                <rect key="frame" x="34" y="174" width="303" height="163"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo Internet.png" translatesAutoresizingMaskIntoConstraints="NO" id="zcP-us-vbA">
+                                <rect key="frame" x="298" y="591" width="61" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo Internet.png" translatesAutoresizingMaskIntoConstraints="NO" id="zcP-us-vbA">
-                                <rect key="frame" x="52" y="393" width="270" height="147"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eu_gdpr_compliant_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="DDX-lu-h2N">
+                                <rect key="frame" x="120" y="592" width="135" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo_Apple_Swift.png" translatesAutoresizingMaskIntoConstraints="NO" id="f4X-WR-8Ux">
+                                <rect key="frame" x="16" y="594" width="60" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asd_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="gC5-A0-i0k">
+                                <rect key="frame" x="16" y="245" width="343" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -38,6 +46,8 @@
     </scenes>
     <resources>
         <image name="Logo Internet.png" width="2000" height="2000"/>
+        <image name="Logo_Apple_Swift.png" width="256" height="256"/>
         <image name="asd_logo.png" width="779" height="304"/>
+        <image name="eu_gdpr_compliant_logo.png" width="867" height="323"/>
     </resources>
 </document>

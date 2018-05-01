@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdc-4U-DOg">
-                                <rect key="frame" x="28" y="338" width="319" height="215"/>
+                                <rect key="frame" x="28" y="402" width="319" height="215"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.58823529409999997" green="0.73333333329999995" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -36,6 +36,16 @@
                                     <segue destination="8s0-Mq-gGI" kind="presentation" modalPresentationStyle="overFullScreen" id="JDA-P5-v5d"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TL7-o6-0NQ">
+                                <rect key="frame" x="16" y="220" width="343" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Les bureaux sont accessibles du lundi au vendredi de 8h à 17h.
+En dehors de ces heures, une permanence téléphonique est assurée
+24h/24, week-ends et jours fériés.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -47,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-300" y="137.18140929535232"/>
+            <point key="canvasLocation" x="-180" y="143"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="3sq-kI-hOT">
@@ -65,7 +75,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="distanceLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuP-dS-uHQ">
-                                <rect key="frame" x="37" y="342" width="300" height="21"/>
+                                <rect key="frame" x="37" y="334" width="300" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -119,28 +129,46 @@
                                     <action selector="onWebsiteButtonClick:" destination="8s0-Mq-gGI" eventType="touchUpInside" id="mpK-BR-uyH"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EIN-zE-tpS">
+                                <rect key="frame" x="16" y="218" width="343" height="450"/>
+                                <connections>
+                                    <segue destination="Hba-Db-hb2" kind="embed" id="vvd-W5-cBi"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="EIN-zE-tpS" firstAttribute="centerX" secondItem="y60-4o-M8I" secondAttribute="centerX" id="Rwj-F0-dNs"/>
+                            <constraint firstItem="EIN-zE-tpS" firstAttribute="centerY" secondItem="y60-4o-M8I" secondAttribute="centerY" id="gCZ-pr-3TR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gwg-sr-f08"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="tpa-NK-mNw" appends="YES" id="dlD-V9-ewa"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="adressLabel" destination="b6P-kx-GAQ" id="5hR-IS-Rbk"/>
                         <outlet property="callButton" destination="Z5s-ZA-hcm" id="nCa-Mq-Qdy"/>
                         <outlet property="distanceLabel" destination="IuP-dS-uHQ" id="T0q-HE-nID"/>
+                        <outlet property="infoView" destination="EIN-zE-tpS" id="Ft5-1y-42w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hK9-GU-j5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="tpa-NK-mNw">
-                    <connections>
-                        <action selector="onSwipeDown:" destination="8s0-Mq-gGI" id="Hj3-mo-oMv"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="564" y="143.47826086956522"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="9SG-s0-J89">
+            <objects>
+                <viewController id="Hba-Db-hb2" customClass="InfoViewController" customModule="ASD_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gWS-RI-cnf">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="450"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.58823529409999997" green="0.73333333329999995" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="aF5-LJ-aAm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBF-EZ-ss7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1303" y="124"/>
         </scene>
     </scenes>
     <resources>
