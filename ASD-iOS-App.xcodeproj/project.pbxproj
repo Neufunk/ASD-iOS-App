@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C80F1EB7209B7A5900F591E2 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F1EB6209B7A5900F591E2 /* MaterialButton.swift */; };
 		C8185F212094D63A00B1E657 /* call-answer.png in Resources */ = {isa = PBXBuildFile; fileRef = C8185F202094D63A00B1E657 /* call-answer.png */; };
 		C8185F252094D72A00B1E657 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = C8185F222094D72A00B1E657 /* info.png */; };
 		C8185F262094D72A00B1E657 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = C8185F232094D72A00B1E657 /* envelope.png */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C80F1EB6209B7A5900F591E2 /* MaterialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
 		C8185F202094D63A00B1E657 /* call-answer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call-answer.png"; sourceTree = "<group>"; };
 		C8185F222094D72A00B1E657 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		C8185F232094D72A00B1E657 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				C82AB4EA2097B2BE005FD92E /* InfoViewController.swift */,
 				C8185F282094F01100B1E657 /* Effect.swift */,
 				C8A60FF82094599600D372F3 /* Data.swift */,
+				C80F1EB6209B7A5900F591E2 /* MaterialButton.swift */,
 				C8CAD4452088C9A200EE0A94 /* AppDelegate.swift */,
 				C8CAD4492088C9A200EE0A94 /* Main.storyboard */,
 				C8CAD44E2088C9A200EE0A94 /* LaunchScreen.storyboard */,
@@ -193,6 +196,7 @@
 			files = (
 				C8A60FFD2094988800D372F3 /* SecondViewController.swift in Sources */,
 				C8185F292094F01100B1E657 /* Effect.swift in Sources */,
+				C80F1EB7209B7A5900F591E2 /* MaterialButton.swift in Sources */,
 				C8CAD4482088C9A200EE0A94 /* ViewController.swift in Sources */,
 				C8A60FF92094599600D372F3 /* Data.swift in Sources */,
 				C82AB4EB2097B2BE005FD92E /* InfoViewController.swift in Sources */,
@@ -340,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67LCNP5SQ5;
 				INFOPLIST_FILE = asd/Info.plist;
@@ -349,6 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.liblum.asd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -358,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67LCNP5SQ5;
 				INFOPLIST_FILE = asd/Info.plist;
@@ -367,6 +374,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.liblum.asd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

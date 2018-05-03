@@ -86,8 +86,8 @@ class InfoViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func onFacebookButtonClick(_ sender: Any) {
-        let urlApp = "fb://profile/\(data.arrayFacebook[Data.centre]!)"
-        let urlWeb = "https://facebook.com/\(data.arrayFacebook[Data.centre]!)"
+        let urlApp = "fb://profile/\(data.arrayFacebook[Data.centre]![1])"
+        let urlWeb = "https://facebook.com/\(data.arrayFacebook[Data.centre]![0])"
         let application = UIApplication.shared
         if (application.canOpenURL(NSURL(string: urlApp)! as URL)){
             application.open(URL(string: urlApp)!)
