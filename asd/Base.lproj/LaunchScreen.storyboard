@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eu_gdpr_compliant_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="DDX-lu-h2N">
-                                <rect key="frame" x="120" y="592" width="135" height="55"/>
+                                <rect key="frame" x="124" y="592" width="135" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo_Apple_Swift.png" translatesAutoresizingMaskIntoConstraints="NO" id="f4X-WR-8Ux">

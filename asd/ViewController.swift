@@ -14,11 +14,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var findCenterButton: UIButton!
     @IBOutlet weak var upperLogo: UIImageView!
+    @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    
     
     var locationManager: CLLocationManager!
     var currentCoordinate = CLLocation(latitude: 0.0, longitude: 0.0)
     let data = Data()
-    let effect = Effect()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,18 +32,32 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.startUpdatingLocation()
         }
         findCenterButton.roundedButton(corner: .topLeft, corner2: .bottomRight)
+        infoButton.roundedButton(corner: .topLeft, corner2: .bottomRight)
+        blurView.alpha = 0
         findCenterButton.alpha = 0
         upperLogo.alpha = 0
+        infoButton.alpha = 0
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        findCenterButton.fadeIn(duration: 2, delay: 0)
+        upperLogo.fadeIn(duration: 2, delay: 0)
+        infoButton.fadeIn(duration: 2, delay: 0)
+        findCenterButton.pulsate()
     }
     
     @IBAction func onFindCenterButtonClick(_ sender: Any) {
         findNearestCenter()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        findCenterButton.pulsate()
-        findCenterButton.fadeIn(duration: 2, delay: 0)
-        upperLogo.fadeIn(duration: 2, delay: 0)
+    @IBAction func onInfoButtonClick(_ sender: Any) {
+        blurView.alpha = 1
+        let alert = UIAlertController(title: "Informations", message: "Cliquez sur le bouton ci-dessous pour rechercher un centre ASD. Vos données de géolocalisation seront utilisées pour trouver le centre le plus proche de vous. Vos informations ne seront ni stockées, ni partagées avec des tiers.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            self.blurView.alpha = 0
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -49,6 +65,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         print("user latitude = \(userLocation.coordinate.latitude)")
         print("user longitude = \(userLocation.coordinate.longitude)")
         currentCoordinate = CLLocation(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        Data.userLocation = userLocation
     }
     
     func findNearestCenter() {
@@ -58,7 +75,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             if newDistance < finaleDistance {
                 finaleDistance = newDistance
                 Data.centre = key
-                Data.distance = Double(round(finaleDistance))
+                Data.distance = Double(round(finaleDistance/10)*10)
             }
         }
     }

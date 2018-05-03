@@ -17,9 +17,9 @@ extension UIButton {
     func roundedButton(corner: UIRectCorner, corner2: UIRectCorner? = nil){
         let maskPath: UIBezierPath
         if corner2 != nil {
-            maskPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners:[corner, corner2!], cornerRadii: CGSize(width: 90, height: 90))
+            maskPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners:[corner, corner2!], cornerRadii: CGSize(width: 200, height: 150))
         } else {
-            maskPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners:[corner], cornerRadii: CGSize(width: 90, height: 90))
+            maskPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners:[corner], cornerRadii: CGSize(width: 200, height: 150))
         }
         let maskLayer1 = CAShapeLayer()
         maskLayer1.frame = self.bounds

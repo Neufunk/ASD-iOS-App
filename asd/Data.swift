@@ -29,8 +29,9 @@ import CoreLocation
 
 class Data {
     
-    static var centre: String = "Arlon"
+    static var centre: String = "Namur"
     static var distance: Double = 0
+    static var userLocation: CLLocation?
     
     let arrayLocation = [
         "Namur": CLLocation(latitude: 50.4518992, longitude: 4.8725157),
@@ -62,6 +63,36 @@ class Data {
         "Marche": CLLocation(latitude: 50.2248573, longitude: 5.3410594)
     ]
     
+    let arrayCentre = [
+        "Namur": "CENTRE DE NAMUR / EGHEZEE",
+        "Philippeville": "CENTRE DE PHILIPPEVILLE",
+        "Ciney": "CENTRE DE DINANT/CINEY",
+        "Gedinne": "CENTRE DE GEDINNE",
+        "Nivelles": "CENTRE DE NIVELLES",
+        "Braine-L-Alleud": "CENTRE DE BRAINE-L'ALLEUD",
+        "Jodoigne": "CENTRE DE JODOIGNE",
+        "Bruxelles": "CENTRE DE BRUXELLES",
+        "Anderlues": "CENTRE D'ANDERLUES",
+        "Lobbes": "CENTRE DE LOBBES",
+        "Charleroi": "CENTRE DE CHARLEROI",
+        "LaLouviere": "CENTRE DE LA LOUVIERE",
+        "Liege": "CENTRE DE LIEGE",
+        "Aywaille": "CENTRE D'AYWAILLE",
+        "Huy": "CENTRE DE HUY",
+        "Verviers": "CENTRE DE VERVIERS",
+        "Mouscron": "CENTRE DE MOUSCRON",
+        "Comines": "CENTRE DE COMINES",
+        "Tournai": "CENTRE DE TOURNAI",
+        "Ath": "CENTRE DE ATH / LESSINES / ENGHIEN",
+        "Mons": "CENTRE DE MONS",
+        "Eupen": "CENTRE D'EUPEN",
+        "Arlon": "CENTRE D'ARLON",
+        "Etalle": "CENTRE D'ETALLE",
+        "Libramont": "CENTRE DE LIBRAMONT / BERTRIX",
+        "Bastogne": "CENTRE DE BASTOGNE",
+        "Marche": "CENTRE DE MARCHE-HOTTON"
+    ]
+    
     let arrayAdress = [
         "Namur": "CENTRE DE NAMUR/EGHEZEE \nAvenue de la Dame 93 \n5100 Jambes",
         "Philippeville": "CENTRE DE PHILIPPEVILLE \nRue de l'Arsenal 7 bte 2 \n5600 Philippeville",
@@ -69,7 +100,7 @@ class Data {
         "Gedinne": "CENTRE DE GEDINNE \nRue R.Gridlet 8 \n5575 Gedinne",
         "Nivelles": "CENTRE DE NIVELLES \nChaussée de Namur 52c \n1400 Nivelles",
         "Braine-L-Alleud": "CENTRE DE BRAINE-L'ALLEUD \nAvenue Albert 1er 24 \n1420 Braine-L'alleud",
-        "Jodoigne": "CENTRE DE JODOIGNE \n Place Major Boine 3 \n1370 Jodoigne",
+        "Jodoigne": "CENTRE DE JODOIGNE \nPlace Major Boine 3 \n1370 Jodoigne",
         "Bruxelles": "CENTRE DE BRUXELLES \nRue Malibran 53 \n1050 Bruxelles",
         "Anderlues": "CENTRE D'ANDERLUES \nRue du Douaire 40/1 \n6150 Anderlues",
         "Lobbes": "CENTRE DE LOBBES \nRue Albert 1er 28 \n6540 Lobbes",
@@ -86,7 +117,7 @@ class Data {
         "Mons": "CENTRE DE MONS \nRue des canonniers 1 \n7000 Mons",
         "Eupen": "CENTRE D'EUPEN \nAachenerStraße 11-13 \n4700 Eupen",
         "Arlon": "CENTRE D'ARLON \nRue de Rédange 8 \n6700 Arlon",
-        "Etalle": "CENTRE D'ETALLE \nRue de la gare 86 \n 6740 Etalle",
+        "Etalle": "CENTRE D'ETALLE \nRue de la gare 86 \n6740 Etalle",
         "Libramont": "CENTRE DE LIBRAMONT/BERTRIX \nRue des alliés 2 \n6800 Libramont",
         "Bastogne": "CENTRE DE BASTOGNE \nRue Pierre Thomas 10 \n6600 Bastogne",
         "Marche": "CENTRE DE MARCHE-HOTTON \nAllée du Monument 8A/3 \n6900 Marche-en-Famenne"
@@ -180,5 +211,130 @@ class Data {
         "Libramont": "061230410",
         "Bastogne": "061280210",
         "Marche": "084460210"
+    ]
+    
+    let arrayFacebook = [
+        "Namur": "Federation.Aide.et.Soins.a.Domicile",
+        "Philippeville": "Federation.Aide.et.Soins.a.Domicile",
+        "Ciney": "Federation.Aide.et.Soins.a.Domicile",
+        "Gedinne": "Federation.Aide.et.Soins.a.Domicile",
+        "Nivelles": "aideetsoinsadomicilebw",
+        "Braine-L-Alleud": "aideetsoinsadomicilebw",
+        "Jodoigne": "aideetsoinsadomicilebw",
+        "Bruxelles": "Federation.Aide.et.Soins.a.Domicile",
+        "Anderlues": "ASDHainautOriental",
+        "Lobbes": "ASDHainautOriental",
+        "Charleroi": "ASDHainautOriental",
+        "LaLouviere": "ASDHainautOriental",
+        "Liege": "Federation.Aide.et.Soins.a.Domicile",
+        "Aywaille": "Federation.Aide.et.Soins.a.Domicile",
+        "Huy": "Federation.Aide.et.Soins.a.Domicile",
+        "Verviers": "Federation.Aide.et.Soins.a.Domicile",
+        "Mouscron": "Federation.Aide.et.Soins.a.Domicile",
+        "Comines": "Federation.Aide.et.Soins.a.Domicile",
+        "Tournai": "Federation.Aide.et.Soins.a.Domicile",
+        "Ath": "Federation.Aide.et.Soins.a.Domicile",
+        "Mons": "Federation.Aide.et.Soins.a.Domicile",
+        "Eupen": "Federation.Aide.et.Soins.a.Domicile",
+        "Arlon": "luxembourgasd",
+        "Etalle": "luxembourgasd",
+        "Libramont": "luxembourgasd",
+        "Bastogne": "luxembourgasd",
+        "Marche": "luxembourgasd"
+    ]
+    
+    let arrayHoraire = [
+        "Namur": "08h - 12h15 \n13h15 - 17h",
+        "Philippeville": "08h - 12h15 \n13h15 - 16h30",
+        "Ciney": "08h - 12h15 \n13h15 - 17h",
+        "Gedinne": "08h - 12h15 \n13h15 - 17h",
+        "Nivelles": "08h - 12h15 \n13h15 - 17h",
+        "Braine-L-Alleud": "08h - 12h15 \n13h15 - 17h",
+        "Jodoigne": "08h - 12h15 \n13h15 - 17h",
+        "Bruxelles": "08h - 12h15 \n13h15 - 17h",
+        "Anderlues": "08h - 12h15 \n13h15 - 17h",
+        "Lobbes": "08h - 12h15 \n13h15 - 17h",
+        "Charleroi": "08h - 12h15 \n13h15 - 17h",
+        "LaLouviere": "08h - 12h15 \n13h15 - 17h",
+        "Liege": "08h - 12h15 \n13h15 - 17h",
+        "Aywaille": "08h - 12h15 \n13h15 - 17h",
+        "Huy": "08h - 12h15 \n13h15 - 17h",
+        "Verviers": "08h - 12h15 \n13h15 - 17h",
+        "Mouscron": "08h - 12h15 \n13h15 - 17h",
+        "Comines": "08h - 12h15 \n13h15 - 17h",
+        "Tournai": "08h - 12h15 \n13h15 - 17h",
+        "Ath": "08h - 12h15 \n13h15 - 17h",
+        "Mons": "08h - 12h15 \n13h15 - 17h",
+        "Eupen": "08h - 12h15 \n13h15 - 17h",
+        "Arlon": "08h - 12h15 \n13h15 - 17h",
+        "Etalle": "08h - 12h15 \n13h15 - 17h",
+        "Libramont": "08h - 12h15 \n13h15 - 17h",
+        "Bastogne": "08h - 12h15 \n13h15 - 17h",
+        "Marche": "08h - 12h15 \n13h15 - 17h"
+    ]
+    
+    let arrayService = [
+        "Namur": " Soins infirmiers \n Aide familiale \n Aide ménagère \n Garde à domicile \n Garde d'enfants malades \n Centre de coordination",
+        "Philippeville": "Soins infirmiers \n Aide familiale \n Aide ménagère \n Garde d'enfants malades \n Centre de coordination",
+        "Ciney": "Soins infirmiers \n Centre de coordination",
+        "Gedinne": "Soins infirmiers \n Centre de coordination",
+        
+        "Nivelles": "Soins infirmiers \n Aide familiale \n Aide ménagère \n Garde à domicile \n Garde d'enfants malades \n Ouvriers polyvalents \n Personnes à mobilité réduites, Services répit \n Centre de coordination",
+        "Braine-L-Alleud": "Soins infirmiers \n Aide familiale \n Aide ménagère \n Garde à domicile \n Garde d'enfants malades \n Ouvriers polyvalents \n Personnes à mobilité réduites \n Services répit \n Centre de coordination",
+        "Jodoigne": "Soins infirmiers \n Aide familiale \n Aide ménagère \n Garde à domicile \n Garde d'enfants malades \n Ouvriers polyvalents \n Personnes à mobilité réduites \n Services répit \n Centre de coordination",
+        
+        "Bruxelles": "Soins Infirmiers \n Aide familiale \n Aide ménagère \n Garde d'enfants malades \n Centre de Coordination",
+        
+        "Anderlues": "Soins infirmiers \n Aide familiale \n Aide ménagère \n Garde à domicile \n Garde d'enfants malades \n Personnes à mobilité réduites \n Services répit \n Centre de coordination \n Autres services",
+        "Lobbes": "Soins infirmiers \n Aide familiale \n Aide ménagère \n Garde à domicile \n Garde d'enfants malades \n Personnes à mobilité réduites \n Services répit \n Centre de coordination \n Autres services",
+        "Charleroi": "Soins infirmiers \n Aide familiale \n Aide ménagère \n Garde à domicile \n Garde d'enfants malades \n Personnes à mobilité réduites \n Services répit \n Centre de coordination \n Autres services",
+        "LaLouviere": "Soins infirmiers \n Aide familiale \n Aide ménagère \n Garde à domicile \n Garde d'enfants malades \n Personnes à mobilité réduites \n Services répit \n Centre de coordination \n Autres services",
+        
+        "Liege": "043428428",
+        "Aywaille": "043428428",
+        "Huy": "043428428",
+        
+        "Verviers": "087329090",
+        "Mouscron": "056859292",
+        "Comines": "056555119",
+        "Tournai": "069253000",
+        "Ath": "068287979",
+        "Mons": "065403131",
+        "Eupen": "087590780",
+        "Arlon": "063230404",
+        "Etalle": "063450075",
+        "Libramont": "061230410",
+        "Bastogne": "061280210",
+        "Marche": "084460210"
+    ]
+    
+    let arrayAccess = [
+        "Namur": "Parking \n Accès PMR",
+        "Philippeville": "Parking \n Accès PMR",
+        "Ciney": "Parking \n Accès PMR",
+        "Gedinne": "Parking \n Accès PMR",
+        "Nivelles": "Parking \n Accès PMR",
+        "Braine-L-Alleud": "Parking \n Accès PMR",
+        "Jodoigne": "Parking \n Accès PMR",
+        "Bruxelles": "Parking \n Accès PMR",
+        "Anderlues": "Parking \n Accès PMR",
+        "Lobbes": "Parking \n Accès PMR",
+        "Charleroi": "Parking \n Accès PMR",
+        "LaLouviere": "Parking \n Accès PMR",
+        "Liege": "Parking \n Accès PMR",
+        "Aywaille": "Parking \n Accès PMR",
+        "Huy": "Parking \n Accès PMR",
+        "Verviers": "Parking \n Accès PMR",
+        "Mouscron": "Parking \n Accès PMR",
+        "Comines": "Parking \n Accès PMR",
+        "Tournai": "Parking \n Accès PMR",
+        "Ath": "Parking \n Accès PMR",
+        "Mons": "Parking \n Accès PMR",
+        "Eupen": "Parking \n Accès PMR",
+        "Arlon": "Parking \n Accès PMR",
+        "Etalle": "Parking \n Accès PMR",
+        "Libramont": "Parking \n Accès PMR",
+        "Bastogne": "Parking \n Accès PMR",
+        "Marche": "Parking \n Accès PMR"
     ]
 }

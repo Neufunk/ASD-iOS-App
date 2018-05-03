@@ -97,7 +97,6 @@
 		C8CAD4442088C9A200EE0A94 /* asd */ = {
 			isa = PBXGroup;
 			children = (
-				C8CAD44C2088C9A200EE0A94 /* Assets.xcassets */,
 				C8CAD4472088C9A200EE0A94 /* ViewController.swift */,
 				C8A60FFC2094988800D372F3 /* SecondViewController.swift */,
 				C82AB4EA2097B2BE005FD92E /* InfoViewController.swift */,
@@ -106,6 +105,7 @@
 				C8CAD4452088C9A200EE0A94 /* AppDelegate.swift */,
 				C8CAD4492088C9A200EE0A94 /* Main.storyboard */,
 				C8CAD44E2088C9A200EE0A94 /* LaunchScreen.storyboard */,
+				C8CAD44C2088C9A200EE0A94 /* Assets.xcassets */,
 				C8CAD4512088C9A200EE0A94 /* Info.plist */,
 			);
 			path = asd;
