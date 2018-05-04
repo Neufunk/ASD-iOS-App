@@ -14,7 +14,7 @@ class Effect {
 }
 
 extension UIButton {
-    func roundedButton(corner: UIRectCorner, corner2: UIRectCorner? = nil){
+    func roundedCorner(corner: UIRectCorner, corner2: UIRectCorner? = nil){
         let maskPath: UIBezierPath
         if corner2 != nil {
             maskPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners:[corner, corner2!], cornerRadii: CGSize(width: 200, height: 150))
@@ -29,11 +29,11 @@ extension UIButton {
     
     func pulsate() {
         let pulse = CASpringAnimation(keyPath: "transform.scale")
-        pulse.duration = 0.1
+        pulse.duration = 0.6
         pulse.fromValue = 0.95
         pulse.toValue = 1.0
         pulse.autoreverses = true
-        pulse.repeatCount = 1
+        pulse.repeatCount = 2
         pulse.initialVelocity = 0.2
         pulse.damping = 1.0
         layer.add(pulse, forKey: nil)

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MessageUI
 
 class SecondViewController: UIViewController {
     
@@ -34,6 +35,10 @@ class SecondViewController: UIViewController {
         }
     }
     
+    @IBAction func onMailButtonClick(_ sender: Any) {
+        sendEmail()
+    }
+    
     private func callNumber(phoneNumber:String) {
         if let phoneCallURL:NSURL = NSURL(string:"tel://\(phoneNumber)") {
             let application:UIApplication = UIApplication.shared
@@ -41,5 +46,22 @@ class SecondViewController: UIViewController {
                 application.open(phoneCallURL as URL)
             }
         }
+    }
+    
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = (self as! MFMailComposeViewControllerDelegate)
+            mail.setToRecipients(["informatique@asd-namur.be"])
+            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+            
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
     }
 }

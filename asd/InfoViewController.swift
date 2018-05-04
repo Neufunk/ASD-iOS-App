@@ -58,13 +58,11 @@ class InfoViewController: UIViewController, UIScrollViewDelegate {
     private func checkTime(){
         let calendar = Calendar.current
         let now = Date()
-        let ouverture = calendar.date(
-            bySettingHour: 8,
-            minute: 0,
-            second: 0,
-            of: now)!
+        let weekday = calendar.component(.day, from: now)
+        let ouverture = calendar.date(bySettingHour: 8, minute: 0, second: 0, of: now)!
         let fermeture = calendar.date(bySettingHour: 17, minute: 0, second: 0, of: now)!
-        if now >= ouverture && now <= fermeture {
+        
+        if now >= ouverture && now <= fermeture && weekday != 5 && weekday != 6 {
             statutLabel.text = "Ouvert"
             // RGB base 1 du vert ASD #96bb37
             statutLabel.textColor = UIColor.init(red: 0.58, green: 0.73, blue: 0.21, alpha: 1)
@@ -74,7 +72,7 @@ class InfoViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    func centerMapOnLocation(location: CLLocation){
+    func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
         

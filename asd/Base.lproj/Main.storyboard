@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asd_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="D9Q-NM-45m">
-                                        <rect key="frame" x="16" y="25" width="343" height="128"/>
+                                        <rect key="frame" x="15" y="25" width="343" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdc-4U-DOg" customClass="MaterialButton" customModule="ASD_iOS_App" customModuleProvider="target">
@@ -41,7 +41,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWa-Iw-i3U" customClass="MaterialButton" customModule="ASD_iOS_App" customModuleProvider="target">
-                                        <rect key="frame" x="118" y="569" width="138" height="36"/>
+                                        <rect key="frame" x="117" y="569" width="138" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.4039215686" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="INFORMATIONS">
@@ -117,6 +117,9 @@
                                         <inset key="titleEdgeInsets" minX="-30" minY="50" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="66" minY="-30" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="E-MAIL" image="envelope.png"/>
+                                        <connections>
+                                            <action selector="onMailButtonClick:" destination="8s0-Mq-gGI" eventType="touchUpInside" id="HEg-7f-KDO"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asd_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="auX-pg-1hk">
                                         <rect key="frame" x="16" y="25" width="343" height="128"/>
@@ -284,7 +287,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zpM-hR-zLc">
-                                        <rect key="frame" x="751" y="186" width="370" height="228"/>
+                                        <rect key="frame" x="750" y="186" width="375" height="228"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </mapView>
                                 </subviews>

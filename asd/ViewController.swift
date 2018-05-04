@@ -29,17 +29,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
-        findCenterButton.roundedButton(corner: .topLeft, corner2: .bottomRight)
-        infoButton.roundedButton(corner: .topLeft, corner2: .bottomRight)
+        findCenterButton.roundedCorner(corner: .topLeft, corner2: .bottomRight)
+        infoButton.roundedCorner(corner: .topLeft, corner2: .bottomRight)
         findCenterButton.alpha = 0
         upperLogo.alpha = 0
         infoButton.alpha = 0
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        findCenterButton.fadeIn(duration: 2, delay: 0)
-        upperLogo.fadeIn(duration: 2, delay: 0)
-        infoButton.fadeIn(duration: 2, delay: 0)
+        findCenterButton.fadeIn(duration: 1, delay: 0)
+        upperLogo.fadeIn(duration: 1, delay: 0)
+        infoButton.fadeIn(duration: 1, delay: 0)
         findCenterButton.pulsate()
     }
     
