@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MessageUI
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var adressLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
@@ -51,13 +51,17 @@ class SecondViewController: UIViewController {
     func sendEmail() {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = (self as! MFMailComposeViewControllerDelegate)
+            mail.mailComposeDelegate = self
             mail.setToRecipients(["informatique@asd-namur.be"])
-            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
-            
-            present(mail, animated: true)
+            mail.setSubject("Demande d'informations via l'App iOS")
+            mail.setMessageBody("<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>", isHTML: true)
+            self.present(mail, animated: true)
         } else {
-            // show failure alert
+            let alert = UIAlertController(title: "Impossible d'ouvrir Mail", message: "Aucun compte de messagerie ne semble configuré dans l'application Mail. Vous pouvez contacter le centre par e-mail à cette adresse : \n\(data.arrayMailAdress[Data.centre]!)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"MAIL ALERT\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     

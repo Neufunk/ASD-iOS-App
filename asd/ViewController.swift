@@ -70,7 +70,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             if newDistance < finaleDistance {
                 finaleDistance = newDistance
                 Data.centre = key
+                print(finaleDistance)
+                if (finaleDistance > 1000) {
+                    Data.distance = Double(round(finaleDistance/100)*100)
+                } else {
                 Data.distance = Double(round(finaleDistance))
+            }
             }
         }
     }

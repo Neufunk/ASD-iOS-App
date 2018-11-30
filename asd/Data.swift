@@ -29,7 +29,7 @@ import CoreLocation
 
 class Data {
     
-    static var centre: String = "Namur"
+    static var centre: String = "Eupen"
     static var distance: Double = 0
     static var userLocation: CLLocation?
     
